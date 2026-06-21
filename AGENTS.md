@@ -10,6 +10,8 @@ Welcome to the Total Drive Care (TDC) website repository. This document serves a
 - **Domain:** www.totaldrivecare.lk
 - **Hotline:** 071 114 4444 (Local) / +94 71 114 4444 (Intl)
 - **Main Email:** info@totaldrivecare.lk
+- **Facebook:** https://www.facebook.com/totaldrivecare.lk
+- **Instagram:** https://www.instagram.com/totaldrivecare.lk
 - **Location:** Athurugiriya, Sri Lanka (Next-generation auto repair specializing in major mechanical troubleshooting, structural bodywork, and advanced hydraulic suspension diagnostics)
 - **Key Selling Proposition:** Smart tracking and clear communication (SMS and Email notifications on repair stages)
 
