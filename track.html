@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Live Repair Tracking | Verify Vehicle Status | TDC Athurugiriya</title>
+  <meta name="description" content="Track your vehicle repair status live at Total Drive Care Solutions Athurugiriya. Enter your Job ID and registered mobile number to view diagnostic details.">
+  <meta name="keywords" content="track car repair, vehicle status Sri Lanka, live auto tracking, mechanics Athurugiriya">
+  <link rel="canonical" href="https://www.totaldrivecare.lk/track.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.totaldrivecare.lk/track.html">
+  <meta property="og:title" content="TDC Live Smart Repair Tracking Portal">
+  <meta property="og:description" content="Secure vehicle repair progress portal. Enter your Tracking ID and phone number to verify diagnostic stages.">
+  <meta property="og:image" content="public/TDC-No-Text-Logo-300x300.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandSlate: '#0f172a', /* Used for dark details like footer */
+            brandNavy: '#f1f5f9',
+            brandCard: '#ffffff',
+            brandCyan: '#0284c7', /* Sky 600 - High Tech Blue */
+            brandOrange: '#f97316',
+            brandOrangeHover: '#ea580c',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="public/TDC-No-Text-Logo-300x300.png">
+</head>
+<body class="blueprint-grid min-h-screen text-slate-700 antialiased selection:bg-brandCyan selection:text-white">
+
+  <!-- ================= HEADER SECTION ================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-20 flex items-center bg-white/80 border-b border-slate-200/80 backdrop-blur-md px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brandCyan focus:ring-offset-2" aria-label="Total Drive Care Home">
+        <div class="w-10 h-10 bg-white border border-brandCyan/20 rounded flex items-center justify-center p-0.5 group-hover:border-brandCyan transition-colors">
+          <img src="public/TDC-No-Text-Logo-300x300.png" alt="Total Drive Care Solutions Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg sm:text-xl font-bold tracking-wider text-slate-900 font-[Rajdhani] leading-none group-hover:text-brandCyan transition-colors">TOTAL DRIVE CARE</span>
+          <span class="text-[9px] uppercase tracking-widest text-brandCyan leading-none mt-1">Next-Gen Auto Engineering</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-xs tracking-wider uppercase font-[Rajdhani]" aria-label="Desktop Navigation">
+        <a href="index.html" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Home</a>
+        <a href="index.html#services" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Services</a>
+        <a href="index.html#way-of-work" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Smart Tracking</a>
+        <a href="blog.html" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Blog</a>
+        <a href="index.html#gallery" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Gallery</a>
+        <a href="index.html#reviews" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Reviews</a>
+        <a href="careers.html" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Careers</a>
+        <a href="index.html#contact" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Contact</a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="flex items-center gap-4">
+        <a href="index.html#booking" class="hidden sm:inline-flex items-center justify-center font-[Rajdhani] font-bold text-xs tracking-wider uppercase text-white bg-brandOrange hover:bg-brandOrangeHover py-2.5 px-4 rounded glow-btn-orange transition-colors">
+          Book Appointment
+        </a>
+        <button class="lg:hidden text-slate-600 hover:text-brandCyan p-2 rounded" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle Menu">
+          <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" id="hamburger-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg class="h-6 w-6 hidden" stroke="currentColor" fill="none" viewBox="0 0 24 24" id="close-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Dropdown Menu -->
+  <div class="lg:hidden fixed top-20 left-0 right-0 z-40 bg-white border-b border-slate-200 backdrop-blur-lg hidden" id="mobile-nav" aria-label="Mobile Navigation">
+    <nav class="flex flex-col gap-4 p-6 text-sm font-semibold tracking-widest uppercase font-[Rajdhani]">
+      <a href="index.html" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Home</a>
+      <a href="index.html#services" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Services</a>
+      <a href="index.html#way-of-work" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Smart Tracking</a>
+      <a href="blog.html" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Blog</a>
+      <a href="index.html#gallery" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Gallery</a>
+      <a href="index.html#reviews" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Reviews</a>
+      <a href="careers.html" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Careers</a>
+      <a href="index.html#contact" class="text-slate-600 hover:text-brandCyan py-2">Contact</a>
+    </nav>
+  </div>
+
+  <main class="pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs sm:text-sm font-semibold tracking-widest text-brandCyan uppercase font-[Rajdhani] bg-sky-50 border border-sky-100 px-3 py-1 rounded-full">Secure Portal</span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-4 font-[Rajdhani] tracking-wide">Secure Repair Tracker</h1>
+        <div class="h-1.5 w-24 bg-brandCyan mx-auto mt-4 rounded-full"></div>
+        <p class="text-slate-500 mt-6 text-sm sm:text-base leading-relaxed">
+          Verify your vehicle repair status details in real time. Please input the Tracking Job ID and your registered 10-digit mobile number.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mt-8">
+        
+        <!-- Form Verification Panel (Col 5) -->
+        <div class="lg:col-span-5 w-full">
+          <div class="bg-white border border-slate-200/80 rounded-xl p-6 md:p-8 shadow-sm relative overflow-hidden corner-bracket scanline">
+            <div class="absolute top-0 right-0 bg-sky-50 text-brandCyan text-[9px] font-bold uppercase tracking-widest px-3 py-1 border-b border-l border-slate-200/80 font-[Rajdhani] rounded-bl-lg">
+              AUTH SECURE
+            </div>
+            
+            <h2 class="text-xl font-bold text-slate-900 font-[Rajdhani] tracking-wide mb-6 uppercase flex items-center gap-2">
+              <svg class="h-5 w-5 text-brandCyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+              </svg>
+              Verification Input
+            </h2>
+
+            <form id="secure-tracker-form" class="space-y-5" onsubmit="event.preventDefault(); verifyTracking();">
+              <div>
+                <label for="track-id" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Tracking ID (Job ID) *</label>
+                <input type="text" id="track-id" required placeholder="e.g. TDC-303" class="w-full bg-slate-50 border border-slate-200 focus:border-brandCyan focus:bg-white text-slate-800 placeholder-slate-400 rounded px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-brandCyan transition-all font-mono tracking-wider uppercase">
+              </div>
+
+              <div>
+                <label for="track-phone" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Registered Mobile *</label>
+                <input type="tel" id="track-phone" required placeholder="e.g. 0713333333" pattern="[0-9]{10}" class="w-full bg-slate-50 border border-slate-200 focus:border-brandCyan focus:bg-white text-slate-800 placeholder-slate-400 rounded px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-brandCyan transition-all font-mono tracking-wider">
+                <span class="text-[10px] text-slate-400 mt-1 block">Must match the 10-digit number registered at vehicle intake.</span>
+              </div>
+
+              <button type="submit" class="w-full bg-brandCyan hover:bg-sky-700 text-white py-3 rounded font-[Rajdhani] font-bold text-base tracking-wider uppercase transition-colors shadow-sm">
+                Verify & Track Status
+              </button>
+            </form>
+
+            <div class="mt-8 border-t border-slate-100 pt-6 space-y-4">
+              <h4 class="text-xs font-bold text-brandCyan uppercase tracking-widest font-[Rajdhani]">Test Combinations:</h4>
+              <div class="grid grid-cols-1 gap-2 text-xs font-mono text-slate-500">
+                <div class="p-2 bg-slate-50 border border-slate-100 rounded flex justify-between items-center">
+                  <span>ID: <strong class="text-slate-800 font-bold" onclick="setDemoCredentials('TDC-101', '0711144444')">TDC-101</strong></span>
+                  <span>Phone: <strong class="text-slate-800 font-bold" onclick="setDemoCredentials('TDC-101', '0711144444')">0711144444</strong></span>
+                </div>
+                <div class="p-2 bg-slate-50 border border-slate-100 rounded flex justify-between items-center">
+                  <span>ID: <strong class="text-slate-800 font-bold" onclick="setDemoCredentials('TDC-303', '0713333333')">TDC-303</strong></span>
+                  <span>Phone: <strong class="text-slate-800 font-bold" onclick="setDemoCredentials('TDC-303', '0713333333')">0713333333</strong></span>
+                </div>
+                <div class="p-2 bg-slate-50 border border-slate-100 rounded flex justify-between items-center">
+                  <span>ID: <strong class="text-slate-800 font-bold" onclick="setDemoCredentials('TDC-505', '0715555555')">TDC-505</strong></span>
+                  <span>Phone: <strong class="text-slate-800 font-bold" onclick="setDemoCredentials('TDC-505', '0715555555')">0715555555</strong></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Verification Results Dashboard (Col 7) -->
+        <div class="lg:col-span-7 w-full">
+          
+          <!-- Default Screen (Locked) -->
+          <div id="tracker-locked-panel" class="bg-white border border-slate-200/80 rounded-xl p-8 shadow-sm text-center space-y-4 min-h-[460px] flex flex-col justify-center items-center">
+            <div class="w-16 h-16 rounded-full bg-slate-100 mx-auto flex items-center justify-center border border-slate-200 text-slate-400 animate-pulse">
+              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-800 font-[Rajdhani] tracking-widest uppercase">Portal Locked</h3>
+            <p class="text-xs sm:text-sm text-slate-500 max-w-sm leading-relaxed">
+              For client privacy, vehicle specifications and diagnostic logs are secure. Please input correct matching credentials on the left to unlock details.
+            </p>
+          </div>
+
+          <!-- Error Alert (Wrong Code) -->
+          <div id="tracker-error-panel" class="bg-white border border-red-200 rounded-xl p-8 shadow-sm text-center space-y-4 min-h-[460px] flex flex-col justify-center items-center hidden">
+            <div class="w-16 h-16 rounded-full bg-red-50 border border-red-100 text-red-500 mx-auto flex items-center justify-center">
+              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-red-600 font-[Rajdhani] tracking-widest uppercase">Verification Failed</h3>
+            <p class="text-xs sm:text-sm text-slate-500 max-w-sm leading-relaxed" id="error-message">
+              The Tracking ID or Mobile number entered is incorrect or does not match our records.
+            </p>
+          </div>
+
+          <!-- Dynamic Unlocked Dashboard Panel -->
+          <div id="tracker-unlocked-panel" class="bg-white border border-slate-200/80 rounded-xl p-6 md:p-8 shadow-sm space-y-6 hidden">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100 font-[Rajdhani]">
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-slate-400 font-mono">SECURE VEHICLE REPORT</span>
+                <h3 class="text-xl font-bold text-slate-900 tracking-wide" id="result-vehicle-name">Range Rover Sport</h3>
+              </div>
+              <span id="result-stage-badge" class="sm:self-center px-3 py-1 rounded text-xs font-bold uppercase tracking-wider bg-sky-50 text-brandCyan border border-sky-100">
+                Stage 3 / 5
+              </span>
+            </div>
+
+            <!-- Specs Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-mono text-slate-600 border-b border-slate-100 pb-5">
+              <div>
+                <div class="text-slate-400">Tracking Code:</div>
+                <div class="font-bold text-slate-900 mt-0.5" id="result-job-id">TDC-303</div>
+              </div>
+              <div>
+                <div class="text-slate-400">Registered Owner:</div>
+                <div class="font-bold text-slate-800 mt-0.5" id="result-owner">Devinda de Silva</div>
+              </div>
+              <div>
+                <div class="text-slate-400">License Plate:</div>
+                <div class="font-bold text-slate-800 mt-0.5" id="result-plate">WP CBB-7788</div>
+              </div>
+              <div>
+                <div class="text-slate-400">Intake Date:</div>
+                <div class="font-bold text-slate-800 mt-0.5" id="result-date">June 18, 2026</div>
+              </div>
+            </div>
+
+            <!-- Symptoms / Diagnostic Log -->
+            <div class="text-xs bg-slate-50 border border-slate-100 rounded p-4">
+              <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-widest font-mono mb-1">Symptoms reported:</span>
+              <p class="text-slate-700 leading-normal font-sans" id="result-issue">
+                Suspension air bellows leaking, steering rack noise.
+              </p>
+            </div>
+
+            <!-- Interactive Stepper Progress -->
+            <div class="space-y-4">
+              <h4 class="text-xs font-bold text-brandCyan uppercase tracking-widest font-[Rajdhani]">Repair Timeline Progress</h4>
+              
+              <div class="space-y-3" id="result-stepper-container">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+
+            <!-- Dynamic Notifications logs -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
+              
+              <!-- SMS Notification mockup -->
+              <div class="space-y-2">
+                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest font-mono flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brandCyan animate-pulse"></span>
+                  SMS Alert Sent
+                </span>
+                <div class="p-4 bg-slate-50 border border-slate-100 rounded-lg text-xs leading-relaxed text-slate-600 relative shadow-inner">
+                  <span class="absolute top-1 right-2 text-[8px] font-mono text-slate-400">DELIVERED</span>
+                  <p class="font-sans" id="result-sms-text"></p>
+                </div>
+              </div>
+
+              <!-- Email notification mockup -->
+              <div class="space-y-2">
+                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest font-mono flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brandCyan"></span>
+                  Email Invoice Alert
+                </span>
+                <div class="p-4 bg-slate-50 border border-slate-100 rounded-lg text-xs leading-relaxed text-slate-600 relative shadow-inner">
+                  <span class="absolute top-1 right-2 text-[8px] font-mono text-slate-400">SENT</span>
+                  <div class="font-mono whitespace-pre-line text-[10px] leading-normal" id="result-email-text"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="p-4 border-l-2 border-brandCyan bg-sky-50/50 text-xs text-slate-600 leading-relaxed font-sans">
+              <strong>Integration point:</strong> In production, `verifyTracking()` can issue a fetch call to your API server: `https://api.totaldrivecare.lk/track?id=JOB_ID&phone=PHONE_NUMBER` to query the live relational database.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-brandSlate border-t border-slate-800 pt-10 pb-8 text-xs font-[Rajdhani] text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center font-mono">
+      <div>
+        &copy; 2026 Total Drive Care Solutions (PVT) LTD. Athurugiriya.
+      </div>
+      <div class="flex gap-6 mt-4 sm:mt-0">
+        <a href="index.html" class="hover:text-brandCyan transition-colors">Home</a>
+        <a href="privacy-policy.html" class="hover:text-brandCyan transition-colors">Privacy Policy</a>
+        <a href="terms-conditions.html" class="hover:text-brandCyan transition-colors">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // --- Mobile Navigation Toggle ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+      mobileNav.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // --- Interactive Tracking Simulation Database ---
+    const trackingDb = {
+      'TDC-101': {
+        phone: '0711144444',
+        vehicle: 'Mitsubishi Lancer Evolution X',
+        customer: 'Roshan Ranasinghe',
+        regNo: 'WP KD-5444',
+        registered: 'June 20, 2026',
+        issue: 'ABS dashboard light triggered, engine rough idle.',
+        stage: 1,
+        sms: 'TDC Alert: Your Lancer Evo (KD-5444) has entered Diagnostics. Our EFI scan indicates pressure discrepancies in throttle body. Suspension logs show solid valve lines. Estimate detail will trigger soon.',
+        email: 'Dear Roshan,\n\nYour vehicle is currently in Stage 1: Diagnostics. Our diagnostic engineer has logged fault codes: ABS-33922 (sensor signal fault) and EFI-9921 (throttle position discrepancy).\n\nWe are compiling parts estimates and will email you details shortly.\n\nBest regards,\nTotal Drive Care team.'
+      },
+      'TDC-202': {
+        phone: '0712222222',
+        vehicle: 'Toyota Land Cruiser Prado',
+        customer: 'Nirmal Perera',
+        regNo: 'WP CAS-3321',
+        registered: 'June 19, 2026',
+        issue: 'Active height control hydraulic suspension leak.',
+        stage: 2,
+        sms: 'TDC Alert: Prado (CAS-3321) has completed diagnostics. Stage 2: Sourcing Parts. Hydraulic seal valves and OEM damper valves ordered. Tap here to approve estimate ($340): http://tdc.lk/e/3321',
+        email: 'Dear Nirmal,\n\nYour Land Cruiser Prado is in Stage 2: Parts Sourcing & Approval.\n\nWe have identified fluid leaks in the rear hydraulic accumulator seals. Parts list:\n- Rear Hydraulic seals: Rs. 42,000\n- AHC fluid exchange: Rs. 18,000\n\nTotal Estimate: Rs. 60,000. Please log into your portal to click approve or reply APPROVED to this mail.\n\nBest regards,\nTotal Drive Care team.'
+      },
+      'TDC-303': {
+        phone: '0713333333',
+        vehicle: 'Range Rover Sport',
+        customer: 'Devinda de Silva',
+        regNo: 'WP CBB-7788',
+        registered: 'June 18, 2026',
+        issue: 'Suspension air bellows leaking, steering rack noise.',
+        stage: 3,
+        sms: 'TDC Alert: Range Rover (CBB-7788) is in Stage 3: Active Repair. Suspension air bellows replacement and steering rack realignment in progress by mechanical team.',
+        email: 'Dear Devinda,\n\nYour Range Rover Sport is currently under Active Repair (Stage 3). New OEM air bellows are being fitted and pressurized. Front rack calibration is scheduled next.\n\nEstimated completion: June 22, 2026.\n\nBest regards,\nTotal Drive Care team.'
+      },
+      'TDC-404': {
+        phone: '0714444444',
+        vehicle: 'Honda Civic Si',
+        customer: 'Shehan Fernando',
+        regNo: 'WP KH-1122',
+        registered: 'June 20, 2026',
+        issue: 'Turbo pressure wastegate diagnostic and engine tune-up.',
+        stage: 4,
+        sms: 'TDC Alert: Civic (KH-1122) is in Stage 4: Calibration & QC. Wastegate pressure calibration in progress on dyno board, followed by structural test drive.',
+        email: 'Dear Shehan,\n\nYour Civic Si has entered Stage 4: Quality Control & Calibration. The turbo boost cycles are undergoing computerized dyno calibration. Road test is scheduled within the hour.\n\nBest regards,\nTotal Drive Care team.'
+      },
+      'TDC-505': {
+        phone: '0715555555',
+        vehicle: 'Mercedes-Benz E300',
+        customer: 'Fathima Shiraz',
+        regNo: 'WP CBG-9900',
+        registered: 'June 17, 2026',
+        issue: 'Collision tinkering, front bumper auto painting.',
+        stage: 5,
+        sms: 'TDC Alert: Mercedes E300 (CBG-9900) is in Stage 5: Ready. Body tinkering and oven paint bake complete. Vehicle is detailed & washed. Final invoice sent to email.',
+        email: 'Dear Fathima,\n\nYour Mercedes-Benz E300 is Ready for Collection! All collision damage tinkering is complete, and paint matching passes our gloss audit. Your invoice (Ref: #19982) is attached. Workshop closing at 6:00 PM.\n\nBest regards,\nTotal Drive Care team.'
+      }
+    };
+
+    function setDemoCredentials(code, phone) {
+      document.getElementById('track-id').value = code;
+      document.getElementById('track-phone').value = phone;
+      verifyTracking();
+    }
+
+    function verifyTracking() {
+      const idInput = document.getElementById('track-id').value.trim().toUpperCase();
+      const phoneInput = document.getElementById('track-phone').value.trim();
+
+      const lockedPanel = document.getElementById('tracker-locked-panel');
+      const errorPanel = document.getElementById('tracker-error-panel');
+      const unlockedPanel = document.getElementById('tracker-unlocked-panel');
+
+      lockedPanel.classList.add('hidden');
+      errorPanel.classList.add('hidden');
+      unlockedPanel.classList.add('hidden');
+
+      if (!idInput || !phoneInput) {
+        alert('Please fill out all verification fields.');
+        lockedPanel.classList.remove('hidden');
+        return;
+      }
+
+      const record = trackingDb[idInput];
+
+      // Check if code exists AND registered phone matches exactly
+      if (!record || record.phone !== phoneInput) {
+        errorPanel.classList.remove('hidden');
+        return;
+      }
+
+      // Populate spec texts
+      document.getElementById('result-vehicle-name').innerText = record.vehicle;
+      document.getElementById('result-stage-badge').innerText = `Stage ${record.stage} / 5`;
+      document.getElementById('result-job-id').innerText = idInput;
+      document.getElementById('result-owner').innerText = record.customer;
+      document.getElementById('result-plate').innerText = record.regNo;
+      document.getElementById('result-date').innerText = record.registered;
+      document.getElementById('result-issue').innerText = record.issue;
+      document.getElementById('result-sms-text').innerText = record.sms;
+      document.getElementById('result-email-text').innerText = record.email;
+
+      // Build Stepper Progress HTML
+      const stages = [
+        'Diagnostics',
+        'Parts & Quote',
+        'Active Repair',
+        'Calibration',
+        'Handover'
+      ];
+
+      let stepperHtml = '';
+      stages.forEach((name, i) => {
+        const stepNum = i + 1;
+        const isActive = stepNum <= record.stage;
+        const isCurrent = stepNum === record.stage;
+
+        const circleBg = isCurrent ? 'bg-brandCyan text-white border-brandCyan' : (isActive ? 'bg-sky-50 text-brandCyan border-sky-200' : 'bg-slate-50 text-slate-400 border-slate-200');
+        const textWeight = isCurrent ? 'font-bold text-slate-900' : (isActive ? 'text-slate-700' : 'text-slate-400');
+        
+        stepperHtml += `
+          <div class="flex items-center gap-4">
+            <div class="w-6 h-6 rounded-full border flex items-center justify-center text-xs font-mono font-bold ${circleBg}">${stepNum}</div>
+            <span class="text-sm font-[Rajdhani] uppercase tracking-wider ${textWeight}">${name}</span>
+            ${isCurrent ? '<span class="ml-auto w-2 h-2 rounded-full bg-brandCyan animate-ping"></span>' : ''}
+          </div>
+        `;
+      });
+
+      document.getElementById('result-stepper-container').innerHTML = stepperHtml;
+      unlockedPanel.classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>

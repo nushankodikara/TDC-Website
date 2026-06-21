@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap');
+
+/* --- Custom Variables & Setup (Light Titanium Blue Theme) --- */
+:root {
+  --font-headings: 'Rajdhani', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --color-bg-primary: #f8fafc; /* Light Slate Blue/Grey */
+  --color-bg-secondary: #f1f5f9;
+  --color-bg-card: #ffffff; /* Solid White Surfaces */
+  --color-accent-blue: #0284c7; /* Sky 600 - High Tech Blue */
+  --color-accent-blue-rgb: 2, 132, 199;
+  --color-accent-orange: #f97316; /* Safety Orange */
+  --color-accent-orange-hover: #ea580c;
+  --color-border-glass: rgba(2, 132, 199, 0.12);
+  --color-border-glow: rgba(2, 132, 199, 0.25);
+  --color-text-main: #1e293b; /* Slate 800 */
+  --color-text-muted: #475569; /* Slate 600 */
+}
+
+/* --- Base Custom Styles --- */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #0f172a; /* Slate 900 */
+}
+
+/* --- Scrollbar Customization --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* Slate 300 */
+  border: 2px solid var(--color-bg-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-blue);
+}
+
+/* --- Blueprint Grid Overlay --- */
+.blueprint-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(2, 132, 199, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 132, 199, 0.04) 1px, transparent 1px);
+  position: relative;
+}
+
+.blueprint-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: 8px 8px;
+  background-image: 
+    linear-gradient(to right, rgba(2, 132, 199, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 132, 199, 0.02) 1px, transparent 1px);
+  pointer-events: none;
+}
+
+/* --- Dot Matrix Texture --- */
+.dot-matrix {
+  background-image: radial-gradient(rgba(2, 132, 199, 0.06) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* --- Glassmorphism Elements --- */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-glass);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--color-border-glow);
+  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.1), 0 8px 10px -6px rgba(2, 132, 199, 0.05);
+  transform: translateY(-2px);
+}
+
+/* --- Glow and Light Effects --- */
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(2, 132, 199, 0.15);
+}
+
+.glow-border {
+  box-shadow: 0 4px 20px rgba(2, 132, 199, 0.08);
+}
+
+.glow-btn-orange {
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glow-btn-orange:hover {
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.35);
+  transform: translateY(-1px);
+}
+
+/* --- Scroll-Driven Animations: Shrinking Header --- */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
+    @keyframes shrink-header {
+      to {
+        height: 70px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(2, 132, 199, 0.15);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      }
+    }
+    
+    #main-header {
+      animation: shrink-header auto linear both;
+      animation-timeline: scroll(block root);
+      animation-range: 0px 150px;
+    }
+  }
+}
+
+/* --- Scroll-Driven Animations: Content Fade-in / Slide-in Reveal --- */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    @keyframes scroll-reveal {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal-on-scroll {
+      animation: scroll-reveal auto linear both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 40%;
+    }
+  }
+}
+
+/* --- Tab Transitions & Custom Details (FAQ Accordions) --- */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details {
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+}
+
+details[open] summary svg {
+  transform: rotate(180deg);
+  color: var(--color-accent-blue);
+}
+
+details summary svg {
+  transition: transform 0.3s ease;
+}
+
+/* --- Stepper Connector Line for Work Status --- */
+.step-line-active {
+  background: linear-gradient(to right, var(--color-accent-blue), #10b981);
+}
+
+/* --- Tech/Industrial Styling Accents --- */
+.corner-bracket {
+  position: relative;
+}
+
+.corner-bracket::before, .corner-bracket::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: var(--color-accent-blue);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.corner-bracket::before {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+
+.corner-bracket::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+/* Corner bracket hover effect */
+.corner-bracket-hover {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.corner-bracket-hover::before, .corner-bracket-hover::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.corner-bracket-hover::before {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+
+.corner-bracket-hover::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+.corner-bracket-hover:hover::before, .corner-bracket-hover:hover::after {
+  width: 12px;
+  height: 12px;
+  border-color: var(--color-accent-blue);
+}
+
+/* Scanline Animation for Tech Vibe */
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+.scanline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(2, 132, 199, 0.08);
+  animation: scan 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* --- Uploadcare Widget Integration Styles --- */
+.uploadcare--widget {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 0.25rem !important;
+  color: #1e293b !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.75rem !important;
+}
+
+.uploadcare--widget__button {
+  background: rgba(2, 132, 199, 0.1) !important;
+  color: var(--color-accent-blue) !important;
+  border: none !important;
+  font-family: var(--font-headings) !important;
+  font-weight: bold !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+
+.uploadcare--widget__button:hover {
+  background: var(--color-accent-blue) !important;
+  color: #ffffff !important;
+}
+
+/* --- Core Values Custom Animations --- */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg) scale(1.05); }
+  75% { transform: rotate(8deg) scale(1.05); }
+}
+
+.animate-wiggle-hover:hover .animate-wiggle {
+  animation: wiggle 0.4s ease-in-out infinite;
+}
+
+@keyframes pulse-grow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.animate-pulse-hover:hover .animate-pulse-custom {
+  animation: pulse-grow 1s ease-in-out infinite;
+}
+
+@keyframes rotate-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-rotate-hover:hover .animate-rotate-custom {
+  animation: rotate-slow 4s linear infinite;
+}
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Careers | Join Our Auto Repair Team Athurugiriya | TDC</title>
+  <meta name="description" content="Join our next-generation automotive workshop in Athurugiriya. We are hiring EFI technicians, bodywork panel beaters, and apprentice mechanics. Apply today.">
+  <meta name="keywords" content="auto jobs Athurugiriya, mechanic jobs Sri Lanka, EFI technician vacancy, panel beater job Sri Lanka, workshop careers">
+  <link rel="canonical" href="https://www.totaldrivecare.lk/careers.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.totaldrivecare.lk/careers.html">
+  <meta property="og:title" content="Careers | Join Total Drive Care Solutions Team">
+  <meta property="og:description" content="Build your career in next-generation automotive diagnostics, structural repairs, and oven-paint baking in Athurugiriya.">
+  <meta property="og:image" content="public/TDC-No-Text-Logo-300x300.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandSlate: '#0f172a',
+            brandNavy: '#f1f5f9',
+            brandCard: '#ffffff',
+            brandCyan: '#0284c7',
+            brandOrange: '#f97316',
+            brandOrangeHover: '#ea580c',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="public/TDC-No-Text-Logo-300x300.png">
+
+  <!-- hCaptcha Script -->
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+  <!-- Uploadcare Script -->
+  <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js" async defer></script>
+</head>
+<body class="blueprint-grid min-h-screen text-slate-700 antialiased selection:bg-brandCyan selection:text-white bg-slate-50">
+
+  <!-- ================= HEADER SECTION ================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 h-20 flex items-center bg-white/80 border-b border-slate-200/80 backdrop-blur-md px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brandCyan focus:ring-offset-2" aria-label="Total Drive Care Home">
+        <div class="w-10 h-10 bg-white border border-brandCyan/20 rounded flex items-center justify-center p-0.5 group-hover:border-brandCyan transition-colors">
+          <img src="public/TDC-No-Text-Logo-300x300.png" alt="Total Drive Care Solutions Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg sm:text-xl font-bold tracking-wider text-slate-900 font-[Rajdhani] leading-none group-hover:text-brandCyan transition-colors">TOTAL DRIVE CARE</span>
+          <span class="text-[9px] uppercase tracking-widest text-brandCyan leading-none mt-1">Next-Gen Auto Engineering</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-xs tracking-wider uppercase font-[Rajdhani]" aria-label="Desktop Navigation">
+        <a href="index.html" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Home</a>
+        <a href="index.html#services" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Services</a>
+        <a href="index.html#way-of-work" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Smart Tracking</a>
+        <a href="blog.html" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Blog</a>
+        <a href="index.html#gallery" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Gallery</a>
+        <a href="index.html#reviews" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Reviews</a>
+        <a href="careers.html" class="text-brandCyan border-b-2 border-brandCyan pb-1 transition-all" aria-current="page">Careers</a>
+        <a href="index.html#contact" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Contact</a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="flex items-center gap-4">
+        <a href="index.html#booking" class="hidden sm:inline-flex items-center justify-center font-[Rajdhani] font-bold text-xs tracking-wider uppercase text-white bg-brandOrange hover:bg-brandOrangeHover py-2.5 px-4 rounded glow-btn-orange transition-colors">
+          Get Appointment
+        </a>
+        <button class="lg:hidden text-slate-700 hover:text-brandCyan p-2 rounded" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle Menu">
+          <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" id="hamburger-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg class="h-6 w-6 hidden" stroke="currentColor" fill="none" viewBox="0 0 24 24" id="close-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Dropdown Menu -->
+  <div class="lg:hidden fixed top-20 left-0 right-0 z-40 bg-white border-b border-slate-200 backdrop-blur-lg hidden" id="mobile-nav" aria-label="Mobile Navigation">
+    <nav class="flex flex-col gap-4 p-6 text-sm font-semibold tracking-widest uppercase font-[Rajdhani]">
+      <a href="index.html" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Home</a>
+      <a href="index.html#services" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Services</a>
+      <a href="index.html#way-of-work" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Smart Tracking</a>
+      <a href="blog.html" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Blog</a>
+      <a href="index.html#gallery" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Gallery</a>
+      <a href="index.html#reviews" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Reviews</a>
+      <a href="careers.html" class="text-brandCyan py-2 border-b border-slate-100">Careers</a>
+      <a href="index.html#contact" class="text-slate-600 hover:text-brandCyan py-2">Contact</a>
+    </nav>
+  </div>
+
+  <main class="pt-24 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Header -->
+      <div class="text-center max-w-3xl mx-auto mt-12 mb-16">
+        <span class="text-xs sm:text-sm font-semibold tracking-widest text-brandCyan uppercase font-[Rajdhani] bg-sky-50 border border-sky-100 px-3 py-1 rounded-full">Careers</span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-4 font-[Rajdhani] tracking-wide">Join Our Team</h1>
+        <div class="h-1.5 w-24 bg-brandCyan mx-auto mt-4 rounded-full"></div>
+        <p class="text-slate-500 mt-6 text-sm sm:text-base leading-relaxed">
+          At Total Drive Care Solutions, we build next-generation workshops operated by skilled experts. If you have passion for automotive engineering, apply below.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Open Positions List (Col 7) -->
+        <div class="lg:col-span-7 space-y-6">
+          <h2 class="text-2xl font-bold text-slate-900 font-[Rajdhani] tracking-wide mb-6 uppercase">Active Openings</h2>
+
+          <!-- Role 1 -->
+          <div class="bg-white border border-slate-200/80 p-6 rounded-lg hover:border-brandCyan/40 hover:shadow-sm transition-all space-y-4">
+            <div class="flex justify-between items-start gap-4">
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-slate-900 font-[Rajdhani] tracking-wide">Senior EFI Diagnostic Technician</h3>
+                <span class="inline-block text-[10px] text-brandCyan bg-sky-50 border border-sky-100 px-2 py-0.5 rounded font-mono uppercase mt-1">Full-Time | Athurugiriya</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-600 font-mono">LKR 90K - 120K / mo</span>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed font-sans">
+              We are seeking a diagnostic lead with over 5 years of experience in reading ECU fault lines, calibrating fuel injectors, troubleshooting CAN bus loops, and operating diagnostic scan tools (Launch/Autel).
+            </p>
+            <div class="flex gap-2">
+              <button onclick="prefillPosition('Senior EFI Diagnostic Technician')" class="bg-slate-100 hover:bg-slate-200 text-xs text-slate-700 px-4 py-2 font-[Rajdhani] font-bold tracking-wider uppercase rounded transition-colors">
+                Apply for this Role
+              </button>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="bg-white border border-slate-200/80 p-6 rounded-lg hover:border-brandCyan/40 hover:shadow-sm transition-all space-y-4">
+            <div class="flex justify-between items-start gap-4">
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-slate-900 font-[Rajdhani] tracking-wide">Auto Body Panel Beater & Tinkerer</h3>
+                <span class="inline-block text-[10px] text-brandCyan bg-sky-50 border border-sky-100 px-2 py-0.5 rounded font-mono uppercase mt-1">Full-Time | Athurugiriya</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-600 font-mono">LKR 80K - 100K / mo</span>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed font-sans">
+              Seeking an expert panel technician specialized in structural collision restores, hydraulic pulling jigs, chassis realignments, and aluminum fabrication welding procedures.
+            </p>
+            <div class="flex gap-2">
+              <button onclick="prefillPosition('Auto Body Panel Beater & Tinkerer')" class="bg-slate-100 hover:bg-slate-200 text-xs text-slate-700 px-4 py-2 font-[Rajdhani] font-bold tracking-wider uppercase rounded transition-colors">
+                Apply for this Role
+              </button>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="bg-white border border-slate-200/80 p-6 rounded-lg hover:border-brandCyan/40 hover:shadow-sm transition-all space-y-4">
+            <div class="flex justify-between items-start gap-4">
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-slate-900 font-[Rajdhani] tracking-wide">Apprentice Mechanic (Suspension focus)</h3>
+                <span class="inline-block text-[10px] text-brandCyan bg-sky-50 border border-sky-100 px-2 py-0.5 rounded font-mono uppercase mt-1">Full-Time | Training Provided</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-600 font-mono">LKR 45K - 60K / mo</span>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed font-sans">
+              Excellent role for technical college graduates. You will support senior mechanics on shock absorbers swaps, CV joints resets, active height control oil updates, and general servicing under strict mentoring.
+            </p>
+            <div class="flex gap-2">
+              <button onclick="prefillPosition('Apprentice Mechanic')" class="bg-slate-100 hover:bg-slate-200 text-xs text-slate-700 px-4 py-2 font-[Rajdhani] font-bold tracking-wider uppercase rounded transition-colors">
+                Apply for this Role
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Career Application Form (Col 5) - Formspark Integrated -->
+        <div class="lg:col-span-5 w-full bg-white border border-slate-200 rounded-xl p-6 md:p-8 flex flex-col justify-between relative shadow-sm">
+          <div>
+            <h2 class="text-xl font-bold text-slate-900 font-[Rajdhani] tracking-wide mb-2 uppercase">Application Portal</h2>
+            <p class="text-xs text-slate-500 leading-relaxed mb-6">
+              Complete the profile sheet below. Our recruitment team coordinates responses within 3 business days.
+            </p>
+            
+            <form id="career-form" class="space-y-4" action="https://submit-form.com/oA04FVTKe" method="POST">
+              
+              <!-- Formspark redirect -->
+              <input type="hidden" name="_redirect" value="https://www.totaldrivecare.lk/success.html" />
+
+              <div>
+                <label for="career-name" class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Full Name *</label>
+                <input type="text" id="career-name" name="name" required class="w-full bg-slate-50 border border-slate-200 focus:border-brandCyan focus:bg-white text-slate-800 rounded px-4 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brandCyan">
+              </div>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="career-email" class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Email Address *</label>
+                  <input type="email" id="career-email" name="email" required class="w-full bg-slate-50 border border-slate-200 focus:border-brandCyan focus:bg-white text-slate-800 rounded px-4 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brandCyan">
+                </div>
+                <div>
+                  <label for="career-phone" class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Phone Number *</label>
+                  <input type="tel" id="career-phone" name="phone" required placeholder="071XXXXXXX" class="w-full bg-slate-50 border border-slate-200 focus:border-brandCyan focus:bg-white text-slate-800 rounded px-4 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brandCyan">
+                </div>
+              </div>
+
+              <div>
+                <label for="career-position" class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Target Position *</label>
+                <select id="career-position" name="position" required class="w-full bg-slate-50 border border-slate-200 focus:border-brandCyan focus:bg-white text-slate-800 rounded px-4 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brandCyan">
+                  <option value="" disabled selected>Select position</option>
+                  <option value="Senior EFI Diagnostic Technician">Senior EFI Diagnostic Technician</option>
+                  <option value="Auto Body Panel Beater & Tinkerer">Auto Body Panel Beater & Tinkerer</option>
+                  <option value="Apprentice Mechanic">Apprentice Mechanic</option>
+                  <option value="Other / General Application">Other / General Application</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="career-experience" class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Years of Experience *</label>
+                <input type="number" id="career-experience" name="experience" required min="0" placeholder="e.g. 3" class="w-full bg-slate-50 border border-slate-200 focus:border-brandCyan focus:bg-white text-slate-800 rounded px-4 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brandCyan">
+              </div>
+
+              <!-- Uploadcare integration input -->
+              <div>
+                <label for="career-cv" class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2">Upload CV / Profile (PDF or DOC) *</label>
+                <input type="hidden" role="uploadcare-uploader" name="cv_file_url" required data-public-key="3b42138362a7c9f4a65f" data-images-only="false" />
+                <span class="text-[10px] text-slate-400 mt-1 block">Uses Uploadcare secure files upload module.</span>
+              </div>
+
+              <div>
+                <label for="career-cover" class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Cover Note / Certifications</label>
+                <textarea id="career-cover" name="cover_note" rows="3" placeholder="List key training certifications or message..." class="w-full bg-slate-50 border border-slate-200 focus:border-brandCyan focus:bg-white text-slate-800 rounded px-4 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brandCyan"></textarea>
+              </div>
+
+              <div class="flex items-start gap-2">
+                <input type="checkbox" id="career-consent" name="consent_terms" required class="mt-1 accent-brandCyan">
+                <label for="career-consent" class="text-[10px] text-slate-500 leading-normal">
+                  I certify that all details submitted are authentic and consent to TDC storing my professional profile data. *
+                </label>
+              </div>
+
+              <!-- hCaptcha -->
+              <div class="h-captcha my-4" data-sitekey="ccfac43a-a18c-4a38-acf0-c5560fecb8b2"></div>
+
+              <button type="submit" class="w-full bg-brandCyan hover:bg-sky-700 text-white py-2.5 rounded font-[Rajdhani] font-bold text-sm tracking-wider uppercase transition-colors shadow-sm">
+                Submit Application
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-brandSlate border-t border-slate-800 pt-10 pb-8 text-xs font-[Rajdhani] text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center font-mono">
+      <div>
+        &copy; 2026 Total Drive Care Solutions (PVT) LTD. Athurugiriya.
+      </div>
+      <div class="flex gap-6 mt-4 sm:mt-0">
+        <a href="index.html" class="hover:text-brandCyan transition-colors">Home</a>
+        <a href="privacy-policy.html" class="hover:text-brandCyan transition-colors">Privacy Policy</a>
+        <a href="terms-conditions.html" class="hover:text-brandCyan transition-colors">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // --- Mobile Navigation Toggle ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+      mobileNav.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // --- Apply Prefill Action ---
+    function prefillPosition(positionName) {
+      const selectEl = document.getElementById('career-position');
+      selectEl.value = positionName;
+      document.getElementById('career-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+
+</body>
+</html>

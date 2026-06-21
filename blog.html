@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>TDC Blog | Automotive Diagnostics & Mechanical Insights Athurugiriya</title>
+  <meta name="description" content="Read expert guides on EFI diagnostics, active hydraulic suspensions, mechanical troubleshooting, and auto painting from Total Drive Care Solutions Athurugiriya.">
+  <meta name="keywords" content="EFI guides, hydraulic suspension diagnostics, auto painting tips, chassis correction, ABS diagnostics, Sri Lanka auto blog">
+  <link rel="canonical" href="https://www.totaldrivecare.lk/blog.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.totaldrivecare.lk/blog.html">
+  <meta property="og:title" content="TDC Blog | Auto Diagnostics & Technical Insight Guides">
+  <meta property="og:description" content="Expert insights on EFI, suspension engineering, and body restoration from Total Drive Care Solutions in Athurugiriya.">
+  <meta property="og:image" content="public/TDC-No-Text-Logo-300x300.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandSlate: '#0f172a',
+            brandNavy: '#f1f5f9',
+            brandCard: '#ffffff',
+            brandCyan: '#0284c7',
+            brandOrange: '#f97316',
+            brandOrangeHover: '#ea580c',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="public/TDC-No-Text-Logo-300x300.png">
+</head>
+<body class="blueprint-grid min-h-screen text-slate-700 antialiased selection:bg-brandCyan selection:text-white bg-slate-50">
+
+  <!-- ================= HEADER SECTION ================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 h-20 flex items-center bg-white/80 border-b border-slate-200/80 backdrop-blur-md px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brandCyan focus:ring-offset-2" aria-label="Total Drive Care Home">
+        <div class="w-10 h-10 bg-white border border-brandCyan/20 rounded flex items-center justify-center p-0.5 group-hover:border-brandCyan transition-colors">
+          <img src="public/TDC-No-Text-Logo-300x300.png" alt="Total Drive Care Solutions Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg sm:text-xl font-bold tracking-wider text-slate-900 font-[Rajdhani] leading-none group-hover:text-brandCyan transition-colors">TOTAL DRIVE CARE</span>
+          <span class="text-[9px] uppercase tracking-widest text-brandCyan leading-none mt-1">Next-Gen Auto Engineering</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-xs tracking-wider uppercase font-[Rajdhani]" aria-label="Desktop Navigation">
+        <a href="index.html" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Home</a>
+        <a href="index.html#services" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Services</a>
+        <a href="index.html#way-of-work" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Smart Tracking</a>
+        <a href="blog.html" class="text-brandCyan border-b-2 border-brandCyan pb-1 transition-all" aria-current="page">Blog</a>
+        <a href="index.html#gallery" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Gallery</a>
+        <a href="index.html#reviews" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Reviews</a>
+        <a href="careers.html" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Careers</a>
+        <a href="index.html#contact" class="text-slate-600 hover:text-brandCyan pb-1 transition-all">Contact</a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="flex items-center gap-4">
+        <a href="index.html#booking" class="hidden sm:inline-flex items-center justify-center font-[Rajdhani] font-bold text-xs tracking-wider uppercase text-white bg-brandOrange hover:bg-brandOrangeHover py-2.5 px-4 rounded glow-btn-orange transition-colors">
+          Get Appointment
+        </a>
+        <button class="lg:hidden text-slate-700 hover:text-brandCyan p-2 rounded" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle Menu">
+          <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" id="hamburger-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg class="h-6 w-6 hidden" stroke="currentColor" fill="none" viewBox="0 0 24 24" id="close-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Dropdown Menu -->
+  <div class="lg:hidden fixed top-20 left-0 right-0 z-40 bg-white border-b border-slate-200 backdrop-blur-lg hidden" id="mobile-nav" aria-label="Mobile Navigation">
+    <nav class="flex flex-col gap-4 p-6 text-sm font-semibold tracking-widest uppercase font-[Rajdhani]">
+      <a href="index.html" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Home</a>
+      <a href="index.html#services" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Services</a>
+      <a href="index.html#way-of-work" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Smart Tracking</a>
+      <a href="blog.html" class="text-brandCyan py-2 border-b border-slate-100">Blog</a>
+      <a href="index.html#gallery" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Gallery</a>
+      <a href="index.html#reviews" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Reviews</a>
+      <a href="careers.html" class="text-slate-600 hover:text-brandCyan py-2 border-b border-slate-100">Careers</a>
+      <a href="index.html#contact" class="text-slate-600 hover:text-brandCyan py-2">Contact</a>
+    </nav>
+  </div>
+
+  <main class="pt-24 pb-20">
+
+    <!-- ================= BLOG HUB CONTAINER ================= -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="blog-hub-view">
+      
+      <!-- Page Header -->
+      <div class="text-center max-w-3xl mx-auto mt-12 mb-16">
+        <span class="text-xs sm:text-sm font-semibold tracking-widest text-brandCyan uppercase font-[Rajdhani] bg-sky-50 border border-sky-100 px-3 py-1 rounded-full">Engineering Articles</span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-4 font-[Rajdhani] tracking-wide">TDC Insights & Guides</h1>
+        <div class="h-1.5 w-24 bg-brandCyan mx-auto mt-4 rounded-full"></div>
+        <p class="text-slate-500 mt-6 text-sm sm:text-base leading-relaxed">
+          Deep-dive guides on computerized engine tuning, ABS safety parameters, active hydraulic suspension repairs, and mechanical care diagnostics.
+        </p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="bg-white border border-slate-200 p-5 rounded-xl mb-12 flex flex-col md:flex-row gap-6 items-center justify-between shadow-sm">
+        
+        <!-- Category Filters -->
+        <div class="flex gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0" id="blog-category-filters">
+          <button onclick="filterBlog('all')" class="blog-cat-btn active font-[Rajdhani] font-bold text-xs uppercase tracking-wider py-2 px-4 rounded border border-brandCyan text-brandCyan bg-sky-50 transition-colors">All Articles</button>
+          <button onclick="filterBlog('diagnostics')" class="blog-cat-btn font-[Rajdhani] font-bold text-xs uppercase tracking-wider py-2 px-4 rounded border border-slate-200 text-slate-500 hover:text-slate-800 transition-colors">Diagnostics</button>
+          <button onclick="filterBlog('suspension')" class="blog-cat-btn font-[Rajdhani] font-bold text-xs uppercase tracking-wider py-2 px-4 rounded border border-slate-200 text-slate-500 hover:text-slate-800 transition-colors">Suspensions</button>
+          <button onclick="filterBlog('bodywork')" class="blog-cat-btn font-[Rajdhani] font-bold text-xs uppercase tracking-wider py-2 px-4 rounded border border-slate-200 text-slate-500 hover:text-slate-800 transition-colors">Paint & Body</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="relative w-full md:w-80">
+          <label for="blog-search" class="sr-only">Search Articles</label>
+          <input type="text" id="blog-search" oninput="searchBlog()" placeholder="Search articles..." class="w-full bg-slate-50 border border-slate-200 focus:border-brandCyan text-slate-800 rounded pl-10 pr-4 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brandCyan">
+          <svg class="h-4 w-4 text-slate-400 absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+
+      </div>
+
+      <!-- Blog Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+        
+        <!-- Post 1 -->
+        <div class="blog-card diagnostics bg-white border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-brandCyan/40 hover:shadow-md transition-all duration-300" data-id="post-1">
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-brandCyan font-mono mb-4 font-bold">
+              <span>DIAGNOSTICS</span>
+              <span>8 min read</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 font-[Rajdhani] tracking-wide mb-3 hover:text-brandCyan transition-colors cursor-pointer" onclick="openArticle('post-1')">
+              Understanding ABS Wheel Speed Sensor Failure & Diagnostics
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-sans">
+              Modern ABS systems rely on precise wheel speed sensors to coordinate lockup preventions. Discover how oscilloscope readings expose sensor failures before the warning light stays on.
+            </p>
+          </div>
+          <div class="p-6 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">June 18, 2026</span>
+            <button onclick="openArticle('post-1')" class="text-xs font-bold text-brandCyan hover:text-slate-900 uppercase tracking-wider font-[Rajdhani] flex items-center gap-1">
+              Read Guide &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="blog-card suspension bg-white border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-brandCyan/40 hover:shadow-md transition-all duration-300" data-id="post-2">
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-brandCyan font-mono mb-4 font-bold">
+              <span>SUSPENSION</span>
+              <span>10 min read</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 font-[Rajdhani] tracking-wide mb-3 hover:text-brandCyan transition-colors cursor-pointer" onclick="openArticle('post-2')">
+              Diagnostics Guide to SUV Active Hydraulic Height Control Systems
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-sans">
+              Toyota AHC and Lexus suspensions provide ultimate stability but fail when accumulator pressure drops. Learn how we measure valve responses and exchange damping oil.
+            </p>
+          </div>
+          <div class="p-6 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">June 14, 2026</span>
+            <button onclick="openArticle('post-2')" class="text-xs font-bold text-brandCyan hover:text-slate-900 uppercase tracking-wider font-[Rajdhani] flex items-center gap-1">
+              Read Guide &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="blog-card bodywork bg-white border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-brandCyan/40 hover:shadow-md transition-all duration-300" data-id="post-3">
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-brandCyan font-mono mb-4 font-bold">
+              <span>BODYWORK & PAINT</span>
+              <span>6 min read</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 font-[Rajdhani] tracking-wide mb-3 hover:text-brandCyan transition-colors cursor-pointer" onclick="openArticle('post-3')">
+              Why Dust-Free Oven Baking Beats Open Air Paint Drying
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-sans">
+              Dust particles are the enemy of premium clear coats. We explain how our negative-pressure oven creates a factory-grade glass finish on structural accident repairs.
+            </p>
+          </div>
+          <div class="p-6 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">May 29, 2026</span>
+            <button onclick="openArticle('post-3')" class="text-xs font-bold text-brandCyan hover:text-slate-900 uppercase tracking-wider font-[Rajdhani] flex items-center gap-1">
+              Read Guide &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="blog-card suspension bg-white border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-brandCyan/40 hover:shadow-md transition-all duration-300" data-id="post-4">
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-brandCyan font-mono mb-4 font-bold">
+              <span>SUSPENSION</span>
+              <span>7 min read</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 font-[Rajdhani] tracking-wide mb-3 hover:text-brandCyan transition-colors cursor-pointer" onclick="openArticle('post-4')">
+              CV Joint Boots: Spotting Small Leaks Before Big Rebuilt Costs
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-sans">
+              A torn rubber boot lets sand in and grease out, destroying CV joint bearings within miles. We outline key symptoms to listen for during tight turns.
+            </p>
+          </div>
+          <div class="p-6 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">May 15, 2026</span>
+            <button onclick="openArticle('post-4')" class="text-xs font-bold text-brandCyan hover:text-slate-900 uppercase tracking-wider font-[Rajdhani] flex items-center gap-1">
+              Read Guide &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="blog-card diagnostics bg-white border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-brandCyan/40 hover:shadow-md transition-all duration-300" data-id="post-5">
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-brandCyan font-mono mb-4 font-bold">
+              <span>DIAGNOSTICS</span>
+              <span>12 min read</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 font-[Rajdhani] tracking-wide mb-3 hover:text-brandCyan transition-colors cursor-pointer" onclick="openArticle('post-5')">
+              Next-Gen EFI Calibrations: Restoring Cylinder Torque Output
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-sans">
+              When fuel injectors accumulate carbon deposits, engine load thresholds drop. Learn how our automated tune-up restores factory-rated horsepower logs.
+            </p>
+          </div>
+          <div class="p-6 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">April 22, 2026</span>
+            <button onclick="openArticle('post-5')" class="text-xs font-bold text-brandCyan hover:text-slate-900 uppercase tracking-wider font-[Rajdhani] flex items-center gap-1">
+              Read Guide &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= SINGLE BLOG ARTICLE VIEW ================= -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 hidden" id="blog-single-view">
+      
+      <button onclick="closeArticle()" class="bg-white hover:bg-slate-50 border border-slate-300 hover:border-brandCyan text-slate-700 hover:text-brandCyan px-5 py-2 text-xs font-[Rajdhani] font-bold tracking-widest uppercase rounded transition-colors mb-8 flex items-center gap-2">
+        &larr; Back to Insights Hub
+      </button>
+
+      <article class="bg-white p-6 sm:p-10 rounded-xl border border-slate-200 shadow-sm space-y-6">
+        
+        <div class="flex items-center gap-3 text-xs font-mono text-brandCyan font-bold" id="article-meta">
+          <!-- Injected dynamically -->
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 font-[Rajdhani] tracking-wide" id="article-title">
+          <!-- Injected dynamically -->
+        </h1>
+
+        <div class="h-1 w-20 bg-brandCyan rounded"></div>
+
+        <div class="prose text-xs sm:text-sm text-slate-600 space-y-4 max-w-none leading-relaxed pt-4 border-t border-slate-100 font-sans" id="article-body">
+          <!-- Injected dynamically -->
+        </div>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-brandSlate border-t border-slate-800 pt-10 pb-8 text-xs font-[Rajdhani] text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center font-mono">
+      <div>
+        &copy; 2026 Total Drive Care Solutions (PVT) LTD. Athurugiriya.
+      </div>
+      <div class="flex gap-6 mt-4 sm:mt-0">
+        <!-- Formspark newsletter in footer -->
+        <form class="flex gap-2 items-center" action="https://submit-form.com/DcAPdVeHz" method="POST">
+          <input type="hidden" name="subject" value="Newsletter Subscription Request (Blog)" />
+          <input type="hidden" name="_redirect" value="https://www.totaldrivecare.lk/success.html" />
+          
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="Blog Newsletter sign-up" required class="bg-white/10 border border-slate-700 text-white rounded px-3 py-1.5 text-xs focus:outline-none focus:ring-1 focus:ring-brandCyan w-40 sm:w-48">
+          <button type="submit" class="bg-brandCyan hover:bg-sky-500 text-white px-3 py-1.5 rounded font-[Rajdhani] font-bold text-xs uppercase tracking-wider transition-colors">Join</button>
+        </form>
+        <a href="index.html" class="hover:text-brandCyan transition-colors">Home</a>
+        <a href="privacy-policy.html" class="hover:text-brandCyan transition-colors">Privacy Policy</a>
+        <a href="terms-conditions.html" class="hover:text-brandCyan transition-colors">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // --- Mobile Navigation Toggle ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+      mobileNav.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // --- Blog Post Articles Content Database ---
+    const articlesDb = {
+      'post-1': {
+        category: 'DIAGNOSTICS',
+        readTime: '8 min read',
+        date: 'June 18, 2026',
+        title: 'Understanding ABS Wheel Speed Sensor Failure & Diagnostics',
+        body: `
+          <p>Anti-lock Braking Systems (ABS) have become standard safety gear in modern passenger vehicles. At the heart of these braking computers lies a simple component that does critical heavy lifting: the wheel speed sensor. In this guide, our diagnostics team at Total Drive Care in Athurugiriya breaks down how these sensors fail, how we run codes, and how repairs are managed.</p>
+          
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">How Wheel Speed Sensors Work</h3>
+          <p>Wheel speed sensors (also known as ABS sensors) are mounted directly on the wheel hubs, scanning a cogged ring rotating along with the brake rotors. As the wheel turns, the sensor registers electromagnetic frequency pulses. The central ABS module translates these pulses into exact velocity figures. If one wheel slows down drastically compared to the others during sudden braking, the computer overrides mechanical foot brake pressures to prevent lockup.</p>
+          
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">Primary Causes of Sensor Malfunction</h3>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li><strong>Dust and Magnetic Debris:</strong> As brake pads wear down, metallic shaving dust gathers around the magnetic sensor tips, blocking signal transfers.</li>
+            <li><strong>CV Boot Grease Contamination:</strong> A torn CV axle boot (very common on local road bumps) throws thick chassis grease onto the ABS ring, obstructing magnetic field signals.</li>
+            <li><strong>Wiring Harness Degradation:</strong> Because the sensor wire follows the suspension swing arm, constant steering flexes can fracture core copper connections inside the wire sheath.</li>
+          </ul>
+
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">The Diagnostic Procedure at TDC</h3>
+          <p>Simply scanning fault codes isn't enough. Codes tell you a sensor is quiet, but not <em>why</em>. Our diagnostics workflow uses an digital oscilloscope rig connected to the wiring plug. We spin the wheels manually and observe the voltage wave curve on the screen. A healthy sensor prints a clean square or sine wave. A failing sensor prints erratic lines, helping us isolate wiring fractures instantly.</p>
+          <p>If you experience ABS dashboard warnings or a pulsing pedal feel under dry conditions, visit our workshop for a scan immediately. Keep your drive safe and fully controlled.</p>
+        `
+      },
+      'post-2': {
+        category: 'SUSPENSION',
+        readTime: '10 min read',
+        date: 'June 14, 2026',
+        title: 'Diagnostics Guide to SUV Active Hydraulic Height Control Systems',
+        body: `
+          <p>Active Hydraulic Height Control (AHC) suspensions, commonly found on Toyota Land Cruiser Prado and Lexus LX models, represent a masterclass in dynamic vehicle engineering. They adjust pressure and vehicle elevation on the fly to absorb rugged local road terrain. However, active valves require periodic diagnostics to prevent complete system lockups.</p>
+          
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">AHC System Components</h3>
+          <p>Unlike standard steel coil setups, AHC operates using gas chambers, hydraulic pumps, height sensors, and fluid accumulators. Damping stiffness is altered in milliseconds by adjusting fluid pressures between accumulators and gas chambers. Correct suspension behavior depends on fluid viscosity and sensor values.</p>
+          
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">Common Failure Signs</h3>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li><strong>Vehicle Locked in Low State:</strong> The height selector refuses to raise, indicating pump failure, fluid depletion, or pressure leakage.</li>
+            <li><strong>Harsh, Unstable Ride:</strong> If the Prado rides like a brick over small bumps, the gas accumulator membranes have likely ruptured, leading to nitrogen gas leaks.</li>
+            <li><strong>Erratic Height Shifts:</strong> The car shifts height randomly while stopped, pointing to moisture corroding the chassis position sensor contact terminals.</li>
+          </ul>
+
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">Our Recalibration Approach</h3>
+          <p>At Total Drive Care, our technicians hook AHC systems to electronic scanners that read pressure values (measured in MegaPascals). If nitrogen pressure is out of balance, we run accumulator checks. We also carry out pressure flushes using specialized OEM suspension fluids to keep valves fully lubricated and clean. A regular hydraulic scan saves massive overhaul expenses down the line.</p>
+        `
+      },
+      'post-3': {
+        category: 'BODYWORK & PAINT',
+        readTime: '6 min read',
+        date: 'May 29, 2026',
+        title: 'Why Dust-Free Oven Baking Beats Open Air Paint Drying',
+        body: `
+          <p>When restoring a vehicle after an accident or tackling rust damage, the paint layer acts as both the visual coat and the core shield against weather wear. At Total Drive Care, we reject air-dried spray techniques. Instead, we use dedicated paint-baking ovens for professional structural finishing.</p>
+          
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">The Enemy: Air Dust & Moisture</h3>
+          <p>When paint dries slowly in the open workshop, air currents blow invisible dust particles, hair fibers, and bug debris directly onto the wet paint. This ruins gloss reflection. Moisture in the air also compromises chemical adhesion, creating micro-bubbles that lead to early flaking.</p>
+          
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">Inside the Negative-Pressure Oven</h3>
+          <p>Our oven booth keeps a negative-pressure state where ceiling intake filters pump fresh, filtered air downwards, immediately exhausting overspray out through floor grates. The vehicle is painted in a sterile, dust-free zone. Once painted, the oven switches to a heating cycle, raising temperatures to exactly 60°C (140°F) for 40 minutes. This process cures the paint's clear coat, creating a tough, chemical-resistant glass finish that mirrors factory cars.</p>
+        `
+      },
+      'post-4': {
+        category: 'SUSPENSION',
+        readTime: '7 min read',
+        date: 'May 15, 2026',
+        title: 'CV Joint Boots: Spotting Small Leaks Before Big Rebuilt Costs',
+        body: `
+          <p>Constant Velocity (CV) joints transfer engine torque smoothly to the front wheels while allowing steering articulation. These joints run packed with grease inside a flexible rubber envelope called a CV boot. If this rubber boot tears, a costly suspension rebuild is soon to follow.</p>
+          
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">How a Small Tear Destroys a Joint</h3>
+          <p>CV boots run close to road hazards. Small rocks or branch scraps can easily slice the rubber. Once open, centrifugal forces throw out grease from the bearings. Without lubrication, high metal friction occurs. Worse, road mud and sand enter the bearing track, grinding down steel components rapidly.</p>
+          
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">Key Symptoms to Track</h3>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li><strong>Clicks in Tight Turns:</strong> A clicking noise when making slow, sharp maneuvers is a clear warning sign.</li>
+            <li><strong>Grease Splatters Inside the Wheel Rim:</strong> A split boot throws dark grease onto the inner wheel drum and suspension struts.</li>
+            <li><strong>Steering Vibration:</strong> If ignored, the CV joint develops play, generating vibration at highway speeds.</li>
+          </ul>
+          <p>Our inspection team checks CV boots during every service. Catching a tear early means we can clean the joint and replace the rubber boot, saving the cost of a full axle replacement.</p>
+        `
+      },
+      'post-5': {
+        category: 'DIAGNOSTICS',
+        readTime: '12 min read',
+        date: 'April 22, 2026',
+        title: 'Next-Gen EFI Calibrations: Restoring Cylinder Torque Output',
+        body: `
+          <p>Electronic Fuel Injection (EFI) coordinates your engine's combustion cycles, monitoring airflow, exhaust gases, and injector timing. Over time, engine fuel deposits and carbon buildup can lead to performance drops and poor fuel efficiency. That's where calibration comes in.</p>
+          
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">EFI Drift and Carbon Build-up</h3>
+          <p>Fuel injectors operate using tolerances thinner than a human hair, spraying fuel mist under high pressure. Even small carbon blockages can disrupt this spray pattern. This causes uneven combustion, rough idling, and engine knocking.</p>
+          
+          <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 uppercase font-[Rajdhani] tracking-wide">Our EFI Diagnostics and Cleaning</h3>
+          <p>Our calibration process begins with scanner readouts measuring fuel trim levels. Next, we clean injectors using specialized ultrasonic equipment, checking flow rates and spray patterns before reinstalling them. Finally, we reset the ECU's adaptive logs, allowing the engine to adjust to the cleaned system and restore original performance.</p>
+        `
+      }
+    };
+
+    // --- Blog Interface Actions ---
+    function filterBlog(category) {
+      const cards = document.querySelectorAll('.blog-card');
+      const buttons = document.querySelectorAll('#blog-category-filters button');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'border-brandCyan', 'text-brandCyan', 'bg-sky-50');
+        btn.classList.add('border-slate-200', 'text-slate-500');
+      });
+
+      event.target.classList.add('active', 'border-brandCyan', 'text-brandCyan', 'bg-sky-50');
+      event.target.classList.remove('border-slate-200', 'text-slate-500');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function searchBlog() {
+      const query = document.getElementById('blog-search').value.toLowerCase();
+      const cards = document.querySelectorAll('.blog-card');
+
+      cards.forEach(card => {
+        const title = card.querySelector('h3').innerText.toLowerCase();
+        const desc = card.querySelector('p').innerText.toLowerCase();
+        
+        if (title.includes(query) || desc.includes(query)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function openArticle(postId) {
+      const record = articlesDb[postId];
+      if (!record) return;
+
+      document.getElementById('article-meta').innerHTML = `
+        <span>${record.category}</span>
+        <span>&bull;</span>
+        <span>${record.date}</span>
+        <span>&bull;</span>
+        <span>${record.readTime}</span>
+      `;
+      document.getElementById('article-title').innerText = record.title;
+      document.getElementById('article-body').innerHTML = record.body;
+
+      document.getElementById('blog-hub-view').classList.add('hidden');
+      document.getElementById('blog-single-view').classList.remove('hidden');
+      window.scrollTo(0, 0);
+    }
+
+    function closeArticle() {
+      document.getElementById('blog-single-view').classList.add('hidden');
+      document.getElementById('blog-hub-view').classList.remove('hidden');
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+</body>
+</html>
